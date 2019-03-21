@@ -3,7 +3,7 @@ function submitComment() {
     const name = inputField.value
     const messageField =document.getElementById('msg')
     const msg = messageField.value
-    console.log(msg)
+   
 
     const comment = document.createElement('section')
     const h3 = document.createElement('h3')
@@ -20,5 +20,25 @@ function submitComment() {
 
     inputField.value = null
     messageField.value = null
+
+    if (doesNotPassAllValidations(name, msg)){
+    
+        return null
+    }
+}
+function doesNotPassAllValidations(name, msg) {
+    if (!name || !msg) {
+      alert('You forgot to fill in your name or message!')
+      return true;
+    }
+  
+    if(msg.length > 280) {
+      alert('Your comment is too long')
+      return true
+    }
+  
+    return false
+  
+  
 }
   
