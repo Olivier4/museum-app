@@ -25,6 +25,14 @@ main {
     
 }
 
-.comment {
-    border: 3px white
+#comments {
+    border: 3px white;
+}
+.form {
+    border: 3px white;
+}
+
+.formSection {
+    border: 3px white;
+
 }
